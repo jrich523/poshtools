@@ -502,10 +502,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DebugEngine\PowerShellTools.DebugEngine.csproj" />
-    <Content Include="ItemTemplates\PowerShell Script.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="Manifest\$(VisualStudioVersion)\source.extension.vsixmanifest" />
     <Content Include="poshtools.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -516,52 +512,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Files\ScriptDataFile.vstemplate" />
-    <Content Include="Templates\Files\ScriptModule.vstemplate" />
-    <Content Include="Templates\Files\Script.vstemplate" />
-    <Resource Include="Templates\Projects\module_project_icon.ico" />
-    <Content Include="Templates\Projects\PowerModuleProject.vstemplate" />
     <Content Include="Templates\Projects\PowerShellProject.vstemplate" />
     <Resource Include="Templates\Projects\project_icon.ico" />
-    <Content Include="ItemTemplates\PowerShell Script Module.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\PowerShell Script Data File.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="PrettyPrint.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\PowerShellModuleProject.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="Templates\Files\Script.Test.ps1" />
-    <None Include="Templates\Files\ScriptDataFile.psd1" />
-    <None Include="Templates\Files\Script.psm1" />
-    <None Include="Templates\Projects\module.psd1" />
-    <None Include="Templates\Projects\Module.psm1" />
-    <None Include="Templates\Projects\Module.test.ps1" />
-    <None Include="Templates\Projects\PowerShellModuleProject.pssproj" />
     <None Include="Templates\Projects\PowerShellProject.pssproj">
       <SubType>Designer</SubType>
     </None>
     <None Include="Templates\Projects\Script.ps1" />
     <Resource Include="Templates\Files\PowerShell.ico" />
-    <None Include="PowerShellTools.targets" />
+    <None Include="PowerShellTools.targets">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\PowerShellProject.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="Project\SharedProject\SharedProject.proj" />
-    <None Include="Templates\Files\Script.ps1" />
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="PowerShellTools.vsct">
@@ -602,6 +572,34 @@
       <Name>ReplWindow</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3bVSIXContainerProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Items\PowerShellDataFile\PowerShellDataFile.csproj">
+      <Project>{5EC4ABAF-1EFE-4C25-BB9B-7141E25661AE}</Project>
+      <Name>PowerShellDataFile</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Items\PowerShellScriptFile\PowerShellScriptFile.csproj">
+      <Project>{A97EA148-D009-47FE-9D97-545B5DFCE01F}</Project>
+      <Name>PowerShellScriptFile</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Projects\BasicPowerShellModuleProject\BasicPowerShellModuleProject.csproj">
+      <Project>{3895C5E1-B462-44C5-BF9D-0F7FE021C20E}</Project>
+      <Name>BasicPowerShellModuleProject</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Projects\TDDPowerShellModuleProject\TDDPowerShellModuleProject.csproj">
+      <Project>{8D683198-D70E-4CA8-B3DF-2070C86FA627}</Project>
+      <Name>TDDPowerShellModuleProject</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,15 @@
+﻿<VSTemplate Type="Project" Version="2.0.0"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Basic PowerShell Module</Name>
+    <Description>A basic PowerShell module project. The barebones of what you need.</Description>
+    <Icon>module_project_icon.ico</Icon>
+    <ProjectType>PowerShell</ProjectType>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="PowerShellModuleProject.pssproj">
+      <ProjectItem>Module.psd1</ProjectItem>
+      <ProjectItem>Module.psm1</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
