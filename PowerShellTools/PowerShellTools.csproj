@@ -512,18 +512,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Projects\PowerShellProject.vstemplate" />
-    <Resource Include="Templates\Projects\project_icon.ico" />
     <Content Include="PrettyPrint.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Templates\Files\Script.Test.ps1" />
-    <None Include="Templates\Projects\PowerShellProject.pssproj">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Templates\Projects\Script.ps1" />
-    <Resource Include="Templates\Files\PowerShell.ico" />
     <None Include="PowerShellTools.targets">
       <SubType>Designer</SubType>
     </None>
@@ -590,6 +582,13 @@
     <ProjectReference Include="..\Templates\Projects\BasicPowerShellModuleProject\BasicPowerShellModuleProject.csproj">
       <Project>{3895C5E1-B462-44C5-BF9D-0F7FE021C20E}</Project>
       <Name>BasicPowerShellModuleProject</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Projects\PowerShellScriptProject\PowerShellScriptProject.csproj">
+      <Project>{26E659DC-EF7A-48CC-8DA4-524A4D26555A}</Project>
+      <Name>PowerShellScriptProject</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

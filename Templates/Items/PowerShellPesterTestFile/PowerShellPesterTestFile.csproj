@@ -29,11 +29,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{8D683198-D70E-4CA8-B3DF-2070C86FA627}</ProjectGuid>
+    <ProjectGuid>{FBD829FD-06AB-42D4-9F6A-FFC863871997}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TDDPowerShellModuleProject</RootNamespace>
-    <AssemblyName>TDDPowerShellModuleProject</AssemblyName>
+    <RootNamespace>PowerShellPesterTestFile</RootNamespace>
+    <AssemblyName>PowerShellPesterTestFile</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
@@ -52,10 +52,9 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;POWERSHELL;DEV11</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -66,13 +65,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="tddmodule.psd1" />
-    <None Include="tddModule.psm1" />
-    <None Include="tddModule.tests.ps1" />
-    <None Include="tddPowerShellModuleProject.pssproj" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="tddPowerModuleProject.vstemplate" />
+    <None Include="Script.Test.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSTemplate Include="PowerShellPesterTestFile.vstemplate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PowerShell.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -90,9 +98,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="module_project_icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
