@@ -78,7 +78,7 @@ namespace PowerShellTools.Project
         {
             get
             {
-                return new[] { PowerShellConstants.PS1File, PowerShellConstants.PSD1File, PowerShellConstants.PSM1File };
+                return new[] { PowerShellConstants.PS1File, PowerShellConstants.PSD1File, PowerShellConstants.PSM1File, PowerShellConstants.PS1XMLFile };
             }
         }
 
