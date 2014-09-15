@@ -9,7 +9,7 @@
   <TemplateContent>
     <Project ReplaceParameters="true" File="TDDPowerShellModuleProject.pssproj">
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.psd1">tddModule.psd1</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.psm1">tddModule.psm1</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.psm1" OpenInEditor="true">tddModule.psm1</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.tests.ps1">tddModule.tests.ps1</ProjectItem>
     </Project> 
   </TemplateContent>
