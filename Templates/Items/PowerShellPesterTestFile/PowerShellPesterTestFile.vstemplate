@@ -3,19 +3,12 @@
   <TemplateData>
     <Name>PowerShellPesterTestFile</Name>
     <Description>PowerShellPesterTestFile</Description>
-    <Icon>PowerShellPesterTestFile.ico</Icon>
+    <Icon>PowerShell.ico</Icon>
     <TemplateID>040173df-9e7e-488b-b833-0fd952a0e43d</TemplateID>
-    <ProjectType>CSharp</ProjectType>
-    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
-    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
-    <DefaultName>Class.cs</DefaultName>
+    <ProjectType>PowerShell</ProjectType>
+    <DefaultName>pester.test.ps1</DefaultName>
   </TemplateData>
   <TemplateContent>
-    <References>
-      <Reference>
-        <Assembly>System</Assembly>
-      </Reference>
-    </References>
-    <ProjectItem ReplaceParameters="true">Class.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="%fileinputname%.test.ps1">script.test.ps1</ProjectItem>
   </TemplateContent>
 </VSTemplate>
