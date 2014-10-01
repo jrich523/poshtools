@@ -76,6 +76,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Formats.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\Formats.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="tddmodule.psd1" />
     <None Include="tddModule.psm1" />
     <None Include="tddModule.tests.ps1" />

@@ -71,7 +71,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;POWERSHELL;DEV12</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;POWERSHELL;DEV11</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
@@ -588,6 +588,13 @@
     <ProjectReference Include="..\Templates\Items\PowerShellDataFile\PowerShellDataFile.csproj">
       <Project>{5EC4ABAF-1EFE-4C25-BB9B-7141E25661AE}</Project>
       <Name>PowerShellDataFile</Name>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Templates\Items\PowershellFormatFile\PowershellFormatFile.csproj">
+      <Project>{FEBE1308-1B0F-49D5-996B-350F39D3127C}</Project>
+      <Name>PowershellFormatFile</Name>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

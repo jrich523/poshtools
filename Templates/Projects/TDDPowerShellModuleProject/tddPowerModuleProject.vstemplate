@@ -5,12 +5,17 @@
     <Description>A PowerShell module project with Pester based Test rigging. Pester Module must be installed.</Description>
     <Icon>module_project_icon.ico</Icon>
     <ProjectType>PowerShell</ProjectType>
+
   </TemplateData>
   <TemplateContent>
     <Project ReplaceParameters="true" File="TDDPowerShellModuleProject.pssproj">
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.psd1">tddModule.psd1</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.psm1" OpenInEditor="true">tddModule.psm1</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="$safeprojectname$.tests.ps1">tddModule.tests.ps1</ProjectItem>
-    </Project> 
+      <Folder Name="Schemas">
+        <ProjectItem>formats.xsd</ProjectItem>
+      </Folder>
+      <ProjectItem>formats.xsd</ProjectItem>
+    </Project>
   </TemplateContent>
 </VSTemplate>
