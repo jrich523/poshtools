@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Powershell Format File</Name>
+    <Description>A type file that controls the default output of a type. The file must end with format.ps1xml</Description>
+    <Icon>Powershell.ico</Icon>
+    <TemplateID>2869cfa8-9bb0-4278-8f60-c10a3ed3e204</TemplateID>
+    <ProjectType>PowerShell</ProjectType>
+    <DefaultName>type</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem TargetFileName="$fileinputname$.format.ps1xml">type.format.ps1xml</ProjectItem>
+    <ProjectItem TargetFileName="formats.xsd">formats.xsd</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
